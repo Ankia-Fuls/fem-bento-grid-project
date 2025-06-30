@@ -1,0 +1,460 @@
+@font-face {
+  font-family: DMSans-Reg;
+  src: url(../assets/fonts/static/DMSans-Regular.ttf);
+}
+@font-face {
+  font-family: DMSans-Med;
+  src: url(../assets/fonts/static/DMSans-Medium.ttf);
+}
+@font-face {
+  font-family: DMSans-Med-Italic;
+  src: url(../assets/fonts/static/DMSans-MediumItalic.ttf);
+}
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  font-family: DMSans-Reg, sans-serif;
+  font-weight: normal;
+  height: 100vh;
+  width: min(97vw, 100vh);
+  margin: 0 auto;
+  background-color: hsl(40, 16%, 96%);
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+img {
+  width: 100%;
+}
+
+.grid {
+  background-color: hsl(40, 16%, 96%);
+  width: min(97vw, 100vh);
+  height: 100vh;
+  display: grid;
+  gap: 1.2vw;
+  margin: auto;
+  padding: 1vw;
+  grid-template-columns: repeat(12, calc((min(97vw, 100vh) - 13.2vw - 2vw) / 12));
+  grid-template-rows: repeat(10, calc((min(97vw, 100vh) - 14.4vw - 2vw) / 10));
+  grid-template-areas: "create create create social social social social social social schedule schedule schedule" "create create create social social social social social social schedule schedule schedule" "create create create social social social social social social schedule schedule schedule" "create create create social social social social social social schedule schedule schedule" "create create create manage manage manage  manifest manifest manifest schedule schedule schedule" "write write write manage manage manage manifest manifest manifest  schedule schedule schedule" "write write write manage manage manage manifest manifest manifest schedule schedule schedule" "write write write faster faster faster grow grow grow grow grow grow" "write write write faster faster faster grow grow grow grow grow grow" "write write write faster faster faster grow grow grow grow grow grow";
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.create {
+  grid-area: create;
+  background-color: hsl(31, 66%, 93%);
+  font-size: 1.7rem;
+  letter-spacing: -0.125rem;
+  line-height: 0.9;
+  font-family: DMSans-Med, sans-serif;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12%;
+  gap: 10%;
+}
+.create span {
+  color: hsl(256, 67%, 59%);
+  font-family: DMSans-Med-Italic, sans-serif;
+  font-weight: normal;
+}
+
+.write {
+  grid-area: write;
+  background-color: hsl(39, 100%, 71%);
+  font-size: 1.7rem;
+  letter-spacing: -0.125rem;
+  line-height: 0.9;
+  font-family: DMSans-Med, sans-serif;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12%;
+  gap: 10%;
+}
+.write p {
+  align-self: start;
+}
+.write img {
+  width: 115%;
+}
+
+.social {
+  grid-area: social;
+  background-color: hsl(256, 67%, 59%);
+  color: hsl(0, 0%, 100%);
+  font-size: 2.5rem;
+  letter-spacing: -0.125rem;
+  line-height: 0.9;
+  text-align: center;
+  font-family: DMSans-Med, sans-serif;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20% 8%;
+  gap: 10%;
+}
+.social img {
+  width: 45%;
+}
+.social .smaller {
+  font-family: DMSans-Reg, sans-serif;
+  font-weight: normal;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.social .yellow {
+  color: hsl(39, 100%, 71%);
+}
+.social .italic {
+  font-family: DMSans-Med-Italic, sans-serif;
+  font-weight: normal;
+}
+
+.manage {
+  grid-area: manage;
+  background-color: hsl(0, 0%, 100%);
+  font-size: 1.4rem;
+  letter-spacing: -0.125rem;
+  line-height: 0.9;
+  text-align: left;
+  font-family: DMSans-Med, sans-serif;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 10%;
+  gap: 10%;
+  overflow: hidden;
+}
+.manage img {
+  width: 120%;
+  position: relative;
+  left: 3%;
+}
+.manage p {
+  padding-left: 3%;
+}
+
+.maintain {
+  grid-area: manifest;
+  background-color: hsl(39, 100%, 71%);
+  font-size: 1.4rem;
+  letter-spacing: -0.125rem;
+  line-height: 0.9;
+  text-align: left;
+  font-family: DMSans-Med, sans-serif;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 12%;
+  gap: 10%;
+  overflow: hidden;
+}
+.maintain img {
+  position: relative;
+  top: 16%;
+}
+
+.faster {
+  grid-area: faster;
+  background-color: hsl(0, 0%, 100%);
+  font-size: 0.7rem;
+  letter-spacing: 0.0625rem;
+  line-height: 1.2;
+  text-align: left;
+  font-family: DMSans-Reg, sans-serif;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8%;
+  gap: 15%;
+  overflow: hidden;
+}
+.faster .large {
+  font-size: 2.6rem;
+  font-family: DMSans-Med, sans-serif;
+  font-weight: 600;
+  display: block;
+}
+.faster img {
+  width: 80%;
+}
+
+.schedule {
+  grid-area: schedule;
+  background-color: hsl(254, 88%, 90%);
+  font-size: 0.9rem;
+  letter-spacing: -0.0625rem;
+  line-height: 0.9;
+  text-align: left;
+  font-family: DMSans-Reg, sans-serif;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12% 0;
+  gap: 6%;
+  overflow: hidden;
+}
+.schedule p {
+  padding-left: 13%;
+}
+.schedule .heading {
+  font-size: 1.5rem;
+  font-family: DMSans-Med, sans-serif;
+  font-weight: 600;
+  padding-bottom: 2%;
+}
+.schedule img {
+  width: auto;
+  height: 53%;
+  position: relative;
+  left: 39%;
+}
+.schedule .info {
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.grow {
+  grid-area: grow;
+  background-color: hsl(256, 67%, 59%);
+  font-size: 1.6rem;
+  letter-spacing: -0.0625rem;
+  line-height: 0.9;
+  text-align: left;
+  font-family: DMSans-Reg, sans-serif;
+  font-weight: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  gap: 0%;
+  overflow: hidden;
+}
+.grow img {
+  width: auto;
+  height: 90%;
+}
+.grow p {
+  width: 50%;
+  color: hsl(0, 0%, 100%);
+}
+
+@media only screen and (max-width: 650px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  body {
+    margin: 0;
+  }
+  html {
+    font-size: 16px;
+  }
+  .grid {
+    height: auto;
+    min-height: 100vh;
+    gap: 6vw;
+    padding: 2vw;
+    grid-template-columns: repeat(1, calc(min(97vw, 100vh) - 4vw));
+    grid-template-rows: repeat(8, minmax(100px, 50%));
+    grid-template-areas: "social" "manage" "manifest" "schedule" "grow" "faster" "create" "write";
+  }
+  .social {
+    font-size: 2.3rem;
+    letter-spacing: -0.125rem;
+    line-height: 1;
+    padding: 20% 8%;
+    gap: 10%;
+    font-family: DMSans-Reg, sans-serif;
+    font-weight: normal;
+  }
+  .social p {
+    width: 80%;
+  }
+  .social img {
+    width: 50%;
+  }
+  .social .smaller {
+    font-family: DMSans-Reg, sans-serif;
+    font-weight: normal;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  .social .yellow {
+    color: hsl(39, 100%, 71%);
+  }
+  .social .italic {
+    font-family: DMSans-Med-Italic, sans-serif;
+    font-weight: normal;
+  }
+  .manage {
+    padding: 5%;
+    gap: 10%;
+  }
+  .manage img {
+    width: 100%;
+    left: 0%;
+  }
+  .manage p {
+    padding-left: 0%;
+    padding-bottom: 5%;
+  }
+  .maintain {
+    font-size: 1.5rem;
+    padding: 8% 5%;
+    gap: 3%;
+    height: 200px;
+  }
+  .maintain p {
+    width: 80%;
+  }
+  .maintain img {
+    width: 60%;
+    top: 16%;
+  }
+  .schedule {
+    font-size: 1rem;
+    letter-spacing: 0.0625rem;
+    line-height: 1;
+    text-align: center;
+    padding: 0 3%;
+    gap: 4%;
+    height: 450px;
+  }
+  .schedule p {
+    padding-left: 0;
+    width: 100%;
+  }
+  .schedule .heading {
+    padding-bottom: 0%;
+    padding-top: 10%;
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  .schedule img {
+    width: 98%;
+    height: auto;
+    left: 0;
+  }
+  .schedule .info {
+    width: 85%;
+    line-height: 1;
+    letter-spacing: 1px;
+    padding-bottom: 10%;
+  }
+  .grow {
+    font-size: 1.6rem;
+    letter-spacing: -0.0625rem;
+    line-height: 0.8;
+    text-align: center;
+    flex-direction: column;
+    padding: 10%;
+    gap: 10%;
+  }
+  .grow img {
+    width: 75%;
+    height: auto;
+  }
+  .grow p {
+    width: 70%;
+    color: hsl(0, 0%, 100%);
+  }
+  .faster {
+    font-size: 0.8rem;
+    letter-spacing: 0.0625rem;
+    line-height: 1.2;
+    justify-content: start;
+    align-items: start;
+    padding: 5%;
+    gap: 15%;
+  }
+  .faster .large {
+    font-size: 2.6rem;
+    font-family: DMSans-Med, sans-serif;
+    font-weight: 600;
+    display: block;
+  }
+  .faster img {
+    width: 40%;
+    padding-bottom: 5%;
+  }
+  .create {
+    padding: 8%;
+    gap: 15%;
+    align-items: start;
+  }
+  .create img {
+    width: 45%;
+  }
+  .write {
+    justify-content: space-between;
+    align-items: start;
+    padding: 5%;
+    gap: 7%;
+  }
+  .write p {
+    align-self: start;
+    width: 80%;
+  }
+  .write img {
+    width: 65%;
+    padding-bottom: 7%;
+  }
+}
+@media only screen and (max-width: 250px) {
+  html {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=new-style.css.map */
